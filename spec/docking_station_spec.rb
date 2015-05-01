@@ -1,4 +1,5 @@
 require 'docking_station'
+
 describe DockingStation do
   it { is_expected.to respond_to :release_bike}
 
@@ -16,6 +17,8 @@ describe DockingStation do
       end
 
   end
+
+  
 
   describe 'dock' do
     it 'raises an error when full' do
