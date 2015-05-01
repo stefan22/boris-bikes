@@ -13,6 +13,9 @@ class DockingStation
 
   def release_bike
     fail 'No bikes available' if empty?
+    # if the last bike in array is broken do not release bike and raise error 'no bikes avail'
+    fail 'No bikes available' if @bikes.last.broken? 
+
     @bikes.pop
   end
 
